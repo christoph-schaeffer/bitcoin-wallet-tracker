@@ -9,6 +9,8 @@ import ApiService from '@/service';
 
 import '@/registerServiceWorker';
 
+import '@/assets/style.css';
+
 Vue.config.productionTip = false;
 ApiService.init();
 
