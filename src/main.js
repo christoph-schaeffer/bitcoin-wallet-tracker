@@ -5,10 +5,12 @@ import router from '@/router';
 import store from '@/store';
 import vuetify from '@/plugins/vuetify';
 import i18n from '@/i18n';
+import ApiService from '@/service';
 
 import '@/registerServiceWorker';
 
 Vue.config.productionTip = false;
+ApiService.init();
 
 new Vue({
   router,
