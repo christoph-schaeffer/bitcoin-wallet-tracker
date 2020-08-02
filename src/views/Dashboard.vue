@@ -1,20 +1,26 @@
 <template lang="pug">
   v-row.px-3.px-md-6.mt-sm-3.mb-md-3
     v-col( cols="12" sm="6" lg="4" xl="3"
-        v-for="(currency, propertyName, index) in currencyRates"
-        :key="'currency-rate-'+propertyName" )
-      overlap-card(:title="propertyName+' / BTC'" :value="currency.buy" :smallValue="currency.sell")
-        template(v-slot:icon) {{currency.symbol}}
+        v-for="(currency, currencyName, index) in currencyRates"
+        :key="'currency-rate-'+currencyName" )
+      overlay-card
+        template(v-slot:overlay)
+          | {{currency.symbol}}
+        template(v-slot:rightCorner)
+          .grey--text.font-weight-light {{currencyName}} / BTC
+          .text-h5.font-weight-light {{ currency.buy }}
+            br
+            small {{ currency.sell }}
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import OverlapCard from '@/components/OverlapCard';
+import OverlayCard from '@/components/OverlayCard';
 
 export default {
   name: 'Dashboard',
   components: {
-    OverlapCard,
+    OverlayCard,
   },
   computed: {
     ...mapGetters('ticker', [
@@ -27,7 +33,6 @@ export default {
     ]),
   },
   mounted() {
-    console.log(this.$vuetify.breakpoint);
     this.fetchCurrencyRates();
   },
 };
