@@ -3,6 +3,7 @@
     "appName": "Bitcoin Wallet Tracker"
   },
   "navigation": {
-    "dashboard": "Dashboard"
+    "dashboard": "Dashboard",
+    "bitcoinDetails": "Bitcoin Details"
   }
 }

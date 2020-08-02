@@ -1,4 +1,5 @@
 import Dashboard from '@/views/Dashboard';
+import BitcoinDetails from '@/views/BitcoinDetails';
 
 export const root = {
   path: '/',
@@ -9,8 +10,14 @@ export const dashboard = {
   name: 'Dashboard',
   component: Dashboard,
 };
+export const bitcoinDetails = {
+  path: '/Bitcoin-Details',
+  name: 'BitcoinDetails',
+  component: BitcoinDetails,
+};
 
 export default [
   root,
   dashboard,
+  bitcoinDetails,
 ];

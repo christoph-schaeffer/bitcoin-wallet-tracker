@@ -46,6 +46,11 @@ export default {
           title: this.$t('navigation.dashboard'),
           to: routes.dashboard,
         },
+        {
+          icon: 'mdi-ballot',
+          title: this.$t('navigation.bitcoinDetails'),
+          to: routes.bitcoinDetails,
+        },
       ],
     };
   },
