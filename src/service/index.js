@@ -18,7 +18,7 @@ export default {
 
     return Vue.axios.get(url, { cors: true, ...params })
       .catch((error) => {
-        throw new Error(`ApiService ${error}`);
+        throw new Error(`api service ${error}`);
       });
   },
 };

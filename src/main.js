@@ -5,14 +5,16 @@ import router from '@/router';
 import store from '@/store';
 import vuetify from '@/plugins/vuetify';
 import i18n from '@/i18n';
-import ApiService from '@/service';
+import apiService from '@/service';
+import filters from '@/filters';
 
 import '@/registerServiceWorker';
 
 import '@/assets/style.css';
 
 Vue.config.productionTip = false;
-ApiService.init();
+apiService.init();
+filters.init();
 
 new Vue({
   router,

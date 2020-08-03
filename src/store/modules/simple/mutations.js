@@ -11,9 +11,6 @@ export default {
   setTotalBc: (state, payload) => {
     state.totalBc = payload;
   },
-  setProbability: (state, payload) => {
-    state.propability = payload;
-  },
   setInterval: (state, payload) => {
     state.interval = payload;
   },

@@ -15,7 +15,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import OverlayCard from '@/components/OverlayCard';
+import OverlayCard from '@/components/hoc/OverlayCard';
 
 export default {
   name: 'Dashboard',

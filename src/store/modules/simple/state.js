@@ -3,7 +3,6 @@ export default {
   blockCount: undefined,
   bcPerBlock: undefined,
   totalBc: undefined,
-  probability: undefined,
   interval: undefined,
   price24Hr: undefined,
   marketCap: undefined,

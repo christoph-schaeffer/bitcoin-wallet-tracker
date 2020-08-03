@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.bwt-overlay-card.pa-3.mt-3.mt-md-6
+  v-card.bwt-overlay-card.pa-3.mt-3.mt-md-6(v-bind="$attrs")
     .d-flex.flex-wrap
       .justify-space-between.d-flex.grow.flex-wrap
         v-sheet.bwt-overlay-card__overlay(dark
@@ -10,7 +10,6 @@
 
         .text-right(v-if="$slots.rightCorner")
           slot(name="rightCorner")
-
     slot
 </template>
 

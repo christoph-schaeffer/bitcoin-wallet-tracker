@@ -3,7 +3,6 @@ export default {
   blockCount: (state) => state.blockCount,
   bcPerBlock: (state) => state.bcPerBlock,
   totalBc: (state) => state.totalBc,
-  probability: (state) => state.probability,
   interval: (state) => state.interval,
   price24Hr: (state) => state.price24Hr,
   marketCap: (state) => state.marketCap,

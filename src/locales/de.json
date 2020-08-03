@@ -1,9 +1,30 @@
 {
-  "common": {
-    "appName": "Bitcoin Wallet Tracker"
+  "common"        : {
+    "appName": "Bitcoin Wallet Tracker",
+    "fullLocale": "de-DE"
   },
-  "navigation": {
-    "dashboard": "Dashboard",
+  "time": {
+    "seconds": "Sekunden",
+    "minutes": "Minuten",
+    "hours": "Stunden"
+  },
+  "navigation"    : {
+    "dashboard"     : "Dashboard",
     "bitcoinDetails": "Bitcoin Details"
+  },
+  "bitcoinDetails": {
+    "market"              : "Markt",
+    "transactions"        : "Transaktionen",
+    "blockchain"          : "Blockchain",
+    "difficulty"          : "Schwierigkeit",
+    "blockCount"          : "Blockanzahl",
+    "bitcoinPerBlock"     : "Bitcoins pro Block",
+    "totalBitcoin"        : "Bitcoin insgesamt gefunden",
+    "interval"            : "Zeit zwischen den Blöcken",
+    "currentPrice"        : "Aktueller Preis",
+    "marketCapitalization": "Marktkapitalisierung",
+    "transactions24Hr"    : "Transaktionen in den letzten 24 Stunden",
+    "tradingVolume24Hr"   : "Handelsvolumen in den letzten 24 Stunden",
+    "hashRate"            : "Hashrate"
   }
 }
