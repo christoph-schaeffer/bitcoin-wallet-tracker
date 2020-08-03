@@ -1,25 +1,25 @@
 <template lang="pug">
   div
     v-navigation-drawer(app fixed
-      v-model="showDrawer"
-      src="@/assets/drawerBackground.jpg"
+    v-model="showDrawer"
+      src="@/assets/img/drawerBackground.jpg"
       width="260px"
     )
       v-list
         v-list-item
-          v-img.mr-2(src="@/assets/logo.svg" max-width="50")
+          v-img.mr-2(src="@/assets/img/logo.svg" max-width="50")
           v-list-item-content
             v-list-item-title {{ $t('common.appName') }}
 
       v-divider.mb-2.mx-4
 
       v-list
-        v-list-item-group(v-model="activeItem" color="primary")
+        v-list-item-group(color="primary")
           v-list-item(v-for="(item, i) in items" :key="'nav-'+i" :to="item.to")
-              v-list-item-icon
-                v-icon {{item.icon}}
-              v-list-item-content
-                v-list-item-title {{item.title}}
+            v-list-item-icon
+              v-icon {{item.icon}}
+            v-list-item-content
+              v-list-item-title {{item.title}}
 </template>
 
 <script>
@@ -39,17 +39,21 @@ export default {
   },
   data() {
     return {
-      activeItem: 'nav-0',
       items: [
         {
           icon: 'mdi-view-dashboard',
           title: this.$t('navigation.dashboard'),
-          to: routes.dashboard,
+          to: { name: routes.dashboard.name },
         },
         {
           icon: 'mdi-ballot',
           title: this.$t('navigation.bitcoinDetails'),
-          to: routes.bitcoinDetails,
+          to: { name: routes.bitcoinDetails.name },
+        },
+        {
+          icon: 'mdi-swap-horizontal-bold',
+          title: this.$t('navigation.converter'),
+          to: { name: routes.converter.name, params: { currency: this.$t('common.localeCurrency') } },
         },
       ],
     };

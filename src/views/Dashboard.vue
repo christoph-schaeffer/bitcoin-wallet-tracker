@@ -11,6 +11,10 @@
           .text-h5.font-weight-light {{ currency.buy }}
             br
             small {{ currency.sell }}
+        v-divider.my-3
+        .text-right
+          v-btn(text :to="{ name: 'Converter', params: { currency: currencyName }}")
+            | {{$t('dashboard.convert')}}
 </template>
 
 <script>

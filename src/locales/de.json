@@ -1,7 +1,8 @@
 {
   "common"        : {
     "appName": "Bitcoin Wallet Tracker",
-    "fullLocale": "de-DE"
+    "fullLocale": "de-DE",
+    "localeCurrency": "EUR"
   },
   "time": {
     "seconds": "Sekunden",
@@ -10,7 +11,11 @@
   },
   "navigation"    : {
     "dashboard"     : "Dashboard",
-    "bitcoinDetails": "Bitcoin Details"
+    "bitcoinDetails": "Bitcoin Details",
+    "converter": "Währungs Umrechner"
+  },
+  "dashboard": {
+    "convert": "Umrechnen"
   },
   "bitcoinDetails": {
     "market"              : "Markt",
@@ -26,5 +31,14 @@
     "transactions24Hr"    : "Transaktionen in den letzten 24 Stunden",
     "tradingVolume24Hr"   : "Handelsvolumen in den letzten 24 Stunden",
     "hashRate"            : "Hashrate"
+  },
+  "converter": {
+    "input": "Eingabe",
+    "output": "Ausgabe",
+    "notNumericError": "Bitte geben Sie eine Zahl ein",
+    "amount": "Betrag",
+    "resetForm": "Formular zurücksetzen",
+    "swapInputOutput": "Eingabe und Ausgabe tauschen",
+    "result": "Ergebnis"
   }
 }
