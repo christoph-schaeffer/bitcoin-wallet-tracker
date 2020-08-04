@@ -23,7 +23,7 @@ import ComputedTable from '@/components/ComputedTable';
 import localizedNumberFilter from '@/filters/localizedNumber';
 
 export default {
-  name: 'Dashboard',
+  name: 'BitcoinDetails',
   components: {
     OverlayCard,
     ComputedTable,
