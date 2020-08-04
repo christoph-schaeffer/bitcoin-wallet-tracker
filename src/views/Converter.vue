@@ -18,29 +18,30 @@
               v-select(v-else v-model="selectedCurrency", :items="currencies",
                 :label="$t('converter.output')")
 
-          v-text-field(required v-model="input", :label="$t('converter.amount')",
+          v-text-field(required v-model="input" :label="$t('converter.amount')",
             :rules="[v => isNumber(v) || $t('converter.notNumericError')]")
           v-btn.mt-4.mr-4(color="primary", @click="reset")
             | {{$t('converter.resetForm')}}
-          v-btn.mt-4.mr-4.white--text(color="green", @click="toBtc = !toBtc")
+          v-btn.mt-4.mr-4.white--text(color="green" @click="toBtc = !toBtc")
             | {{$t('converter.swapInputOutput')}}
 
     v-col( v-if="output" cols="12" lg="6"  xl="5" )
-      v-card.pa-12.text-center.white--text(color="#4caf50")
-        .text-h5.mt-n8.mb-4 {{$t('converter.result')}}
-        v-divider.mb-6(dark)
-        template(v-if="toBtc")
-          .text-h3 {{ output | localizedNumber(0,8)}} BTC
-          .text-h6 {{ output*100000000 | localizedNumber(0,0)}} Satoshi
-        template(v-else)
-          .text-h3 {{ output | localizedNumber(2,2)}} {{outputSymbol}}
+      colored-card(v-if="toBtc" :title="$t('converter.result')")
+        template(v-slot:headline) {{ output | localizedNumber(0,8)}} BTC
+        template(v-slot:subHeadline) {{ output | btcToSatoshi | localizedNumber(0,0)}} Satoshi
+      colored-card(v-else :title="$t('converter.result')")
+        template(v-slot:headline) {{ output | localizedNumber(2,2)}} {{outputSymbol}}
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import ColoredCard from '@/components/hoc/ColoredCard';
 
 export default {
   name: 'Converter',
+  components: {
+    ColoredCard,
+  },
   props: {
     currency: {
       type: String,
