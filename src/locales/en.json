@@ -2,7 +2,10 @@
   "common"        : {
     "appName"   : "Bitcoin Wallet Tracker",
     "fullLocale": "en-US",
-    "localeCurrency": "USD"
+    "localeCurrency": "USD",
+    "localeCurrencySymbol": "$",
+    "close": "Close",
+    "save": "Save"
   },
   "time"          : {
     "seconds": "seconds",
@@ -15,6 +18,15 @@
     "converter"     : "Currency conversion",
     "chart": "Bitcoin chart",
     "myBitcoins": "My Bitcoins"
+  },
+  "table": {
+    "header": {
+      "sortByText": "Sort by"
+    },
+    "footer": {
+      "itemsPerPageText": "Rows per page",
+      "itemsPerPageAllText": "All"
+    }
   },
   "dashboard": {
     "convert": "Convert"
@@ -52,5 +64,12 @@
     "1year": "1 year",
     "3years": "3 years",
     "allTime": "All time"
+  },
+  "myBitcoins": {
+    "currency": "Currency",
+    "addAddress": "Add address",
+    "address": "Address",
+    "sum": "Sum",
+    "emptyAddress": "Please enter a bitcoin address"
   }
 }

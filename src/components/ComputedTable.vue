@@ -1,10 +1,15 @@
 <template lang="pug">
-  v-data-table(v-bind="$attrs" :items="dataItems" :headers="dataHeaders")
+  v-data-table(v-bind="$attrs" :items="dataItems" :headers="dataHeaders"
+    :footerProps="dataFooterProps" :headerProps="dataHeaderProps")
+
     template(v-slot:body)
       tbody
         tr(v-for="item in dataItems" :key="item.name")
           td(v-for="header in dataHeaders" :key="header.value" v-bind="header" )
-            | {{item[header.value]}}
+            template(v-if="header.value === 'actions'")
+              slot(name="itemActions" :item="item")
+            template(v-else)
+              | {{item[header.value]}}
 </template>
 
 <script>
@@ -22,6 +27,12 @@ export default {
         { value: 'value', align: 'right' },
       ],
     },
+    footerProps: {
+      type: Object,
+    },
+    headerProps: {
+      type: Object,
+    },
   },
   watch: {
     items() {
@@ -33,9 +44,25 @@ export default {
   },
   data() {
     return {
+      dataHeaders: [...this.headers],
+      currentPage: 1,
       dataItems: this.items,
-      dataHeaders: this.headers,
+      dataHeaderProps: {
+        ...this.$t('table.header'),
+        ...this.headerProps,
+      },
+      dataFooterProps: {
+        ...this.$t('table.footer'),
+        ...this.footerProps,
+      },
     };
+  },
+  mounted() {
+    if (this.$scopedSlots.itemActions) {
+      this.dataHeaders.push({
+        text: '', value: 'actions', align: 'right', sortable: false,
+      });
+    }
   },
 };
 </script>

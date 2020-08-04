@@ -14,6 +14,6 @@ export default {
     );
   },
   removeBalance: (state, payload) => {
-    state.balances = state.balances.map((balance) => payload !== balance.address);
+    state.balances = state.balances.filter((balance) => payload !== balance.address);
   },
 };
