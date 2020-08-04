@@ -11,8 +11,7 @@ export default {
   getTotalBc: () => apiService.get(RESOURCE, 'totalbc'),
   getInterval: () => apiService.get(RESOURCE, 'interval'),
 
-  getAddressBalance: (address) => this.apiService(RESOURCE, `addressbalance/${address}`),
-  getAddressFirstSeen: (address) => this.apiService(RESOURCE, `addressfirstseen/${address}`),
+  getAddressBalance: (address) => apiService.get(RESOURCE, `addressbalance/${address}`),
 
   get24HrPrice: () => apiService.get(RESOURCE, '24hrprice'),
   getMarketCap: () => apiService.get(RESOURCE, 'marketcap'),
