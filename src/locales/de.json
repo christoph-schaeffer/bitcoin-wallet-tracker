@@ -13,7 +13,8 @@
     "dashboard"     : "Dashboard",
     "bitcoinDetails": "Bitcoin Details",
     "converter": "Währungs Umrechner",
-    "chart": "Bitcoin Verlauf"
+    "chart": "Bitcoin Verlauf",
+    "myBitcoins": "Meine Bitcoin"
   },
   "dashboard": {
     "convert": "Umrechnen"

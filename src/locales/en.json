@@ -13,7 +13,8 @@
     "dashboard"     : "Dashboard",
     "bitcoinDetails": "Bitcoin details",
     "converter"     : "Currency conversion",
-    "chart": "Bitcoin chart"
+    "chart": "Bitcoin chart",
+    "myBitcoins": "My Bitcoins"
   },
   "dashboard": {
     "convert": "Convert"

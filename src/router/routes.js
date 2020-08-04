@@ -2,6 +2,7 @@ import Dashboard from '@/views/Dashboard';
 import BitcoinDetails from '@/views/BitcoinDetails';
 import Converter from '@/views/Converter';
 import Chart from '@/views/Chart';
+import MyBitcoins from '@/views/MyBitcoins';
 
 export const root = {
   path: '/',
@@ -28,6 +29,11 @@ export const chart = {
   name: 'Chart',
   component: Chart,
 };
+export const myBitcoins = {
+  path: '/My-Bitcoins',
+  name: 'MyBitcoins',
+  component: MyBitcoins,
+};
 
 export default [
   root,
@@ -35,4 +41,5 @@ export default [
   bitcoinDetails,
   converter,
   chart,
+  myBitcoins,
 ];

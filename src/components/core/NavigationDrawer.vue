@@ -60,6 +60,11 @@ export default {
           title: this.$t('navigation.converter'),
           to: { name: routes.converter.name, params: { currency: this.$t('common.localeCurrency') } },
         },
+        {
+          icon: 'mdi-wallet',
+          title: this.$t('navigation.myBitcoins'),
+          to: { name: routes.myBitcoins.name },
+        },
       ],
     };
   },
