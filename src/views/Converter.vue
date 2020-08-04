@@ -2,7 +2,7 @@
   v-row.px-3.px-md-6.mt-sm-3.mb-md-3
     v-col( cols="12" lg="6" xl="7")
       v-card.pa-6
-        v-form(ref="form")
+        v-form
           v-row
             v-col.pt-0(cols="5")
               v-select(v-if="toBtc" v-model="selectedCurrency", :items="currencies",
