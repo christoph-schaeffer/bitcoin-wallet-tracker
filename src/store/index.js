@@ -5,6 +5,7 @@ import layout from '@/store/modules/layout';
 import ticker from '@/store/modules/ticker';
 import simple from '@/store/modules/simple';
 import chart from '@/store/modules/chart';
+import balance from '@/store/modules/balance';
 
 Vue.use(Vuex);
 
@@ -14,5 +15,6 @@ export default new Vuex.Store({
     ticker,
     simple,
     chart,
+    balance,
   },
 });
