@@ -1,3 +1,5 @@
+const localStorageBalances = JSON.parse(window.localStorage.getItem('vuex-balances'));
+
 export default {
-  balances: [],
+  balances: !localStorageBalances ? [] : localStorageBalances,
 };
