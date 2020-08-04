@@ -19,7 +19,7 @@
                 :label="$t('converter.output')")
 
           v-text-field(required v-model="input", :label="$t('converter.amount')",
-            :rules="[v => !isNaN(v.replace(',','.')) || $t('converter.notNumericError')]")
+            :rules="[v => isNumber(v) || $t('converter.notNumericError')]")
           v-btn.mt-4.mr-4(color="primary", @click="reset")
             | {{$t('converter.resetForm')}}
           v-btn.mt-4.mr-4.white--text(color="green", @click="toBtc = !toBtc")
@@ -59,6 +59,7 @@ export default {
     },
     output() {
       if (!this.input) { return undefined; }
+
       const inputNumber = parseFloat(this.input.replace(',', '.'));
       const buyPrice = this.currencyRates[this.selectedCurrency].buy;
 
@@ -81,6 +82,11 @@ export default {
       this.input = undefined;
       this.selectedCurrency = this.currency;
       this.toBtc = true;
+    },
+    isNumber(value) {
+      if (!value) { return false; }
+
+      return !Number.isNaN(value.replace(',', '.'));
     },
   },
   mounted() {
