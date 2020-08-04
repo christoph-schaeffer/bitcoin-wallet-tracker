@@ -51,6 +51,11 @@ export default {
           to: { name: routes.bitcoinDetails.name },
         },
         {
+          icon: 'mdi-chart-line',
+          title: this.$t('navigation.chart'),
+          to: { name: routes.chart.name },
+        },
+        {
           icon: 'mdi-swap-horizontal-bold',
           title: this.$t('navigation.converter'),
           to: { name: routes.converter.name, params: { currency: this.$t('common.localeCurrency') } },

@@ -12,7 +12,8 @@
   "navigation"    : {
     "dashboard"     : "Dashboard",
     "bitcoinDetails": "Bitcoin details",
-    "converter"     : "Currency conversion"
+    "converter"     : "Currency conversion",
+    "chart": "Bitcoin chart"
   },
   "dashboard": {
     "convert": "Convert"
@@ -40,5 +41,15 @@
     "resetForm": "Reset form",
     "swapInputOutput": "Swap input and output",
     "result": "Result"
+  },
+  "chart": {
+    "timespan": "Timespan",
+    "date": "Date",
+    "1week": "1 week",
+    "1month": "1 month",
+    "6months": "6 months",
+    "1year": "1 year",
+    "3years": "3 years",
+    "allTime": "All time"
   }
 }

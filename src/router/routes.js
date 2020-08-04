@@ -1,6 +1,7 @@
 import Dashboard from '@/views/Dashboard';
 import BitcoinDetails from '@/views/BitcoinDetails';
 import Converter from '@/views/Converter';
+import Chart from '@/views/Chart';
 
 export const root = {
   path: '/',
@@ -22,10 +23,16 @@ export const converter = {
   component: Converter,
   props: true,
 };
+export const chart = {
+  path: '/Chart',
+  name: 'Chart',
+  component: Chart,
+};
 
 export default [
   root,
   dashboard,
   bitcoinDetails,
   converter,
+  chart,
 ];

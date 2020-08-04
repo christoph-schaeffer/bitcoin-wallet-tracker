@@ -12,7 +12,8 @@
   "navigation"    : {
     "dashboard"     : "Dashboard",
     "bitcoinDetails": "Bitcoin Details",
-    "converter": "Währungs Umrechner"
+    "converter": "Währungs Umrechner",
+    "chart": "Bitcoin Verlauf"
   },
   "dashboard": {
     "convert": "Umrechnen"
@@ -40,5 +41,15 @@
     "resetForm": "Formular zurücksetzen",
     "swapInputOutput": "Eingabe und Ausgabe tauschen",
     "result": "Ergebnis"
+  },
+  "chart": {
+    "timespan": "Zeitspanne",
+    "date": "Datum",
+    "1week": "1 Woche",
+    "1month": "1 Monat",
+    "6months": "6 Monate",
+    "1year": "1 Jahr",
+    "3years": "3 Jahre",
+    "allTime": "Gesamter Zeitraum"
   }
 }

@@ -16,7 +16,7 @@ export default {
       url = `${resource}/${slug}`;
     }
 
-    return Vue.axios.get(url, { cors: true, ...params })
+    return Vue.axios.get(url, { params })
       .catch((error) => {
         throw new Error(`api service ${error}`);
       });

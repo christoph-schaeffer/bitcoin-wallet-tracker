@@ -1,7 +1,7 @@
 import apiService from '.';
 
-const resource = 'ticker';
+const RESOURCE = 'ticker';
 
 export default {
-  get: () => apiService.get(resource),
+  get: () => apiService.get(RESOURCE),
 };
