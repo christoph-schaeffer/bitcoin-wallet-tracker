@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-row.px-3.px-md-6.mt-sm-3.mb-md-3
+  v-row.px-md-3.mx-0.mt-sm-3.mb-md-3
     v-col( cols="12" sm="6" lg="4" xl="3"
         v-for="(currency, currencyName, index) in currencyRates"
         :key="'currency-rate-'+currencyName" )
