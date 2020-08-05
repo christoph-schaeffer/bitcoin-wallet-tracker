@@ -1,11 +1,13 @@
 <IfModule mod_rewrite.c>
-	RewriteRule ^\.gitignore|\.htaccess$ [R=404,NC,L]
+	RewriteRule ^\.htaccess|\.env|\.env\.development$ [R=404,NC,L]
 
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_URI} ^/bitcoin-wallet-tracker/demo/.+$
+	RewriteCond %{REQUEST_URI} ^/bitcoin-wallet-tracker/demo/(?!(dist\/)).+\..*$
 	RewriteRule (.*) /bitcoin-wallet-tracker/demo/dist/$1 [L]
 
 	RewriteCond %{REQUEST_URI} ^/bitcoin-wallet-tracker/demo/?$
+	RewriteRule (.*) /bitcoin-wallet-tracker/demo/dist/index.html [L]
+
+	RewriteCond %{REQUEST_URI} ^/bitcoin-wallet-tracker/demo/(?!(dist\/)).+$
 	RewriteRule (.*) /bitcoin-wallet-tracker/demo/dist/index.html [L]
 </IfModule>
 
