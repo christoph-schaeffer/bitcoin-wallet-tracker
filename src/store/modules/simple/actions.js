@@ -45,16 +45,16 @@ export default {
     .then(({ data }) => {
       commit('setHashRate', parseFloat(data));
     }),
-  async fetchAll({ dispatch }) {
-    dispatch('fetchDifficulty');
-    dispatch('fetchBlockCount');
-    dispatch('fetchBcPerBlock');
-    dispatch('fetchTotalBc');
-    dispatch('fetchInterval');
-    dispatch('fetchPrice24Hr');
-    dispatch('fetchMarketCap');
-    dispatch('fetchTransactionCount24Hr');
-    dispatch('fetchBtcSent24Hr');
-    dispatch('fetchHashRate');
-  },
+  fetchAll: ({ dispatch }) => Promise.all([
+    dispatch('fetchDifficulty'),
+    dispatch('fetchBlockCount'),
+    dispatch('fetchBcPerBlock'),
+    dispatch('fetchTotalBc'),
+    dispatch('fetchInterval'),
+    dispatch('fetchPrice24Hr'),
+    dispatch('fetchMarketCap'),
+    dispatch('fetchTransactionCount24Hr'),
+    dispatch('fetchBtcSent24Hr'),
+    dispatch('fetchHashRate'),
+  ]),
 };
