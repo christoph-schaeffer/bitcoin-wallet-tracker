@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row.px-md-3.mx-0.mt-sm-3.mb-md-3
     v-col( cols="12" lg="6" xl="7")
-      v-card.pa-6
+      v-card.pa-3.pa-md-6
         v-row
           v-col(cols="4" lg="6")
             v-select(:label="$t('myBitcoins.currency')"
@@ -25,12 +25,12 @@
           | {{ cBalanceSum | localizedNumber(2,2)}} {{selectedCurrencySymbol}}
         template(v-else v-slot:subHeadline) 0 {{selectedCurrencySymbol}}
     v-col(v-if="computedBalances.length" cols="12")
-      v-card.pa-6
+      v-card.pa-3.pa-md-6
         computed-table(:headers="tableHeaders" :items="computedBalances"
           :footerProps="{itemsPerPageText: $t('myBitcoins.addressesPerPage')}")
           template(v-slot:itemActions="{item}")
-            v-icon.mr-3(small @click="updateBalance(item.address)") mdi-refresh
-            v-icon(small @click="removeBalance(item.address)") mdi-delete
+            v-icon.mr-md-3(@click="updateBalance(item.address)") mdi-refresh
+            v-icon(@click="removeBalance(item.address)") mdi-delete
 </template>
 
 <script>
