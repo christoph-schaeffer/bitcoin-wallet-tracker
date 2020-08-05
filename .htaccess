@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+	RewriteRule ^\.gitignore|\.htaccess$ [R=404,NC,L]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} ^/bitcoin-wallet-tracker/demo/.+$
+	RewriteRule (.*) /bitcoin-wallet-tracker/demo/dist/$1 [L]
+
+	RewriteCond %{REQUEST_URI} ^/bitcoin-wallet-tracker/demo/?$
+	RewriteRule (.*) /bitcoin-wallet-tracker/demo/dist/index.html [L]
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 500 seconds"
+    ExpiresByType image/* "access plus 500 seconds"
+    ExpiresByType audio/* "access plus 500 seconds"
+    ExpiresByType video/* "access plus 500 seconds"
+    ExpiresByType font/* "access plus 500 seconds"
+    ExpiresByType text/css "access plus 500 seconds"
+    ExpiresByType text/javascript "access plus 500 seconds"
+    ExpiresByType application/x-javascript "access plus 500 seconds"
+    ExpiresByType application/javascript "access plus 500 seconds"
+</IfModule>
+
