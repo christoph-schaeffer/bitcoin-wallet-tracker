@@ -29,6 +29,7 @@
         computed-table(:headers="tableHeaders" :items="computedBalances"
           :footerProps="{itemsPerPageText: $t('myBitcoins.addressesPerPage')}")
           template(v-slot:itemActions="{item}")
+            v-icon.mr-3(small @click="updateBalance(item.address)") mdi-refresh
             v-icon(small @click="removeBalance(item.address)") mdi-delete
 </template>
 
@@ -91,6 +92,7 @@ export default {
     ...mapActions('balance', [
       'fetchBalance',
       'updateBalance',
+      'updateAllBalances',
       'removeBalance',
     ]),
     ...mapActions('ticker', [
@@ -120,6 +122,7 @@ export default {
   },
   mounted() {
     this.fetchCurrencyRates();
+    this.updateAllBalances();
   },
 };
 </script>

@@ -11,5 +11,8 @@ export default {
     .then(({ data }) => {
       commit('updateBalance', { address, btc: parseFloat(data) / SATOSHI_FACTOR });
     }),
+  updateAllBalances: ({ state, dispatch }) => state.balances.forEach(
+    (balance) => dispatch('updateBalance', balance.address),
+  ),
   removeBalance: ({ commit }, address) => commit('removeBalance', address),
 };
