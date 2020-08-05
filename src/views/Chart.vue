@@ -38,6 +38,31 @@ export default {
         ],
       };
     },
+    chartOptions() {
+      return {
+        legend: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: this.unit ? this.unit : '',
+              },
+            },
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: this.$t('chart.date'),
+              },
+            },
+          ],
+        },
+      };
+    },
   },
   methods: {
     ...mapActions('chart', [
@@ -66,29 +91,6 @@ export default {
         { text: this.$t('chart.3years'), value: '3years' },
         { text: this.$t('chart.allTime'), value: 'all' },
       ],
-      chartOptions: {
-        legend: {
-          display: false,
-        },
-        scales: {
-          yAxes: [
-            {
-              scaleLabel: {
-                display: true,
-                labelString: this.unit,
-              },
-            },
-          ],
-          xAxes: [
-            {
-              scaleLabel: {
-                display: true,
-                labelString: this.$t('chart.date'),
-              },
-            },
-          ],
-        },
-      },
     };
   },
   mounted() {

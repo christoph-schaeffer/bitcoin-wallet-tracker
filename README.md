@@ -1,6 +1,8 @@
 # bitcoin-wallet-tracker
 An example App made with Vue.js for tracking bitcoin exchange rates and your wallet balance.
 
+[LIVE DEMO](https://christoph-schäffer.de/bitcoin-wallet-tracker/demo)
+
 ## Project setup
 ```
 npm install
