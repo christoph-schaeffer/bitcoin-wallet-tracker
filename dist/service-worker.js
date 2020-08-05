@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bitcoin-wallet-tracker/demo/precache-manifest.8accce875155f4aa95b341c815f6cdaf.js"
+  "/bitcoin-wallet-tracker/demo/precache-manifest.e374397800796116cfd4295cf45080ff.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "bitcoin-wallet-tracker"});
