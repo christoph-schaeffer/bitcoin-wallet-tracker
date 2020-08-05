@@ -8,9 +8,9 @@
           | {{currency.symbol}}
         template(v-slot:rightCorner)
           .grey--text.font-weight-light {{currencyName}} / BTC
-          .text-h5.font-weight-light {{ currency.buy }}
+          .text-h5.font-weight-light {{ currency.buy }} {{currency.symbol}}
             br
-            small {{ currency.sell }}
+            small {{ currency.sell }} {{currency.symbol}}
         v-divider.my-3
         .text-right
           v-btn(text :to="{ name: 'Converter', params: { currency: currencyName }}")
