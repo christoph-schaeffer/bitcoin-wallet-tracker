@@ -1,7 +1,7 @@
 <template lang="pug">
   v-row.px-md-3.mx-0.mt-sm-3.mb-md-3
     v-col( cols="12" lg="6" xl="7")
-      v-card.pa-6
+      v-card.pa-3.pa-md-6
         v-form
           v-row
             v-col.pt-0(cols="5")

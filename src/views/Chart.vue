@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.ma-6.pa-6
+  v-card.ma-3.ma-md-6.pa-3.pa-md-6
     v-form
       v-row
         v-col.pt-0(cols="6" lg="4" xl="3")
