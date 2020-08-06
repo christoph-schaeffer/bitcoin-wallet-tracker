@@ -68,5 +68,11 @@ export default {
       ],
     };
   },
+  mounted() {
+    const currentBreakpoint = this.$vuetify.breakpoint.name;
+    if (currentBreakpoint === 'lg' || currentBreakpoint === 'xl') {
+      this.showDrawer = true;
+    }
+  },
 };
 </script>
