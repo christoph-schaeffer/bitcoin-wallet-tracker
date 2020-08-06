@@ -71,7 +71,7 @@ export default {
     formatLabels(values) {
       return values.map((value) => {
         const date = new Date(value.x * 1000);
-        return `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+        return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
       });
     },
   },
