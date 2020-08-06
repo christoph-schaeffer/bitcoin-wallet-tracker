@@ -11,6 +11,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 import LineChart from '@/components/LineChart';
+import localizedDate from '@/filters/localizedDate';
 
 export default {
   name: 'Chart',
@@ -69,10 +70,7 @@ export default {
       'fetchChart',
     ]),
     formatLabels(values) {
-      return values.map((value) => {
-        const date = new Date(value.x * 1000);
-        return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
-      });
+      return values.map((value) => localizedDate((new Date(value.x * 1000))));
     },
   },
   watch: {
