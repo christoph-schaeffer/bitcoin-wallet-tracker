@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b6b8a514a1a8532d8bd0",
-    "url": "/bitcoin-wallet-tracker/demo/css/app.a40e3b9b.css"
+    "revision": "34c4a84dff81ceb27009",
+    "url": "/bitcoin-wallet-tracker/demo/css/app.2089e539.css"
   },
   {
     "revision": "91bed40313a7585eccef",
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bitcoin-wallet-tracker/demo/img/logo.37edfcde.svg"
   },
   {
-    "revision": "39cadb100f896d4c8ac2ef62ae86bb31",
+    "revision": "976becb2184298d736ed856fd3ccede2",
     "url": "/bitcoin-wallet-tracker/demo/index.html"
   },
   {
-    "revision": "b6b8a514a1a8532d8bd0",
-    "url": "/bitcoin-wallet-tracker/demo/js/app.66cf03c2.js"
+    "revision": "34c4a84dff81ceb27009",
+    "url": "/bitcoin-wallet-tracker/demo/js/app.d4b5479a.js"
   },
   {
     "revision": "91bed40313a7585eccef",
