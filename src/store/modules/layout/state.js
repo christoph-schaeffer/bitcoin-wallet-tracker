@@ -1,4 +1,4 @@
 export default {
-  showDrawer: true,
+  showDrawer: false,
   showDialog: false,
 };
