@@ -12,9 +12,10 @@
                 v-btn.mt-2(right absolute dark color="primary" v-bind="attrs" v-on="on")
                   | {{$t('myBitcoins.addAddress')}}
               template(v-slot:content)
-                v-text-field(
-                  v-model="addressField" :label="$t('myBitcoins.address')" :error="showDialogError"
-                  :rules="[v => v.length > 25 && v.length < 36 || $t('myBitcoins.emptyAddress')]")
+                v-text-field(v-model="addressField" :error="showDialogError"
+                  :label="$t('myBitcoins.address')"
+                  :rules="[v => v.length > 25 && v.length < 36 || $t('myBitcoins.emptyAddress')]"
+                )
               template(v-slot:actions)
                 v-btn(text color="blue darken-1" @click="saveAddress()") {{$t('common.save')}}
     v-col(cols="12" lg="6"  xl="5" )

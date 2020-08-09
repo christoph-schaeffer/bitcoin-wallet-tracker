@@ -5,7 +5,8 @@
         v-sheet.bwt-overlay-card__overlay(dark
           v-if="$slots.overlay"
           elevation="6"
-          :color="overlayColor")
+          :color="overlayColor"
+        )
           slot(name="overlay")
 
         .text-right(v-if="$slots.rightCorner")
@@ -28,6 +29,7 @@ export default {
   },
 };
 </script>
+
 <style lang="sass" scoped>
 .bwt-overlay-card
 
@@ -40,5 +42,4 @@ export default {
     font-size: 36px
     line-height: 24px
     text-align: center
-
 </style>

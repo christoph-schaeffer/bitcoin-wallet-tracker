@@ -1,6 +1,7 @@
 <template lang="pug">
   v-data-table(v-bind="$attrs" :items="dataItems" :headers="computedHeaders"
-    :footerProps="dataFooterProps" :headerProps="dataHeaderProps")
+    :footerProps="dataFooterProps" :headerProps="dataHeaderProps"
+  )
 
     template(v-slot:body)
       tbody
@@ -37,15 +38,6 @@ export default {
   watch: {
     items() {
       this.dataItems = this.items;
-    },
-    headers() {
-      this.dataHeaders = [...this.headers];
-
-      if (this.$scopedSlots.itemActions) {
-        this.dataHeaders.push({
-          text: '', value: 'actions', align: 'right', sortable: false,
-        });
-      }
     },
   },
   computed: {
