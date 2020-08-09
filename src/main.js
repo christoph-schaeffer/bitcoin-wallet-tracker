@@ -10,7 +10,7 @@ import filters from '@/filters';
 
 import '@/registerServiceWorker';
 
-import '@/sass/custom.sass';
+import '@/styles/custom.sass';
 
 Vue.config.productionTip = false;
 apiService.init();
