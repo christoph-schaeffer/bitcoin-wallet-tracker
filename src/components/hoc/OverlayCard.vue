@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-card.bwt-overlay-card.pa-3.pa-md-6.mt-3.mt-md-6(v-bind="$attrs")
+  v-card.bwt-overlay-card.pa-3.pa-md-6.mt-6.mt-md-4(v-bind="$attrs")
     .d-flex.flex-wrap
       .justify-space-between.d-flex.grow.flex-wrap
         v-sheet.bwt-overlay-card__overlay(dark
@@ -34,7 +34,7 @@ export default {
 .bwt-overlay-card
 
   &__overlay
-    margin-top: -30px
+    margin-top: -40px
     margin-bottom: 15px
     padding: 28px
     height: 80px
