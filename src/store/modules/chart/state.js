@@ -5,5 +5,4 @@ export default {
   status: null,
   unit: null,
   values: null,
-  isLoading: false,
 };

@@ -5,5 +5,4 @@ export default {
   status: (state) => state.status,
   unit: (state) => state.unit,
   values: (state) => state.values,
-  isLoading: (state) => state.isLoading,
 };
