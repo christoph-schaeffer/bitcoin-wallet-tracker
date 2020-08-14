@@ -12,9 +12,8 @@
             slot(name="content")
         v-card-actions
           v-spacer
-          slot(name="beforeCloseButton")
-          v-btn(v-if="!hideCloseButton" text @click="showDialog = false"
-            :color='closeButtonColor')
+          slot(name="beforeActions")
+          v-btn(v-if="!hideCloseButton" text @click="showDialog = false" :color='closeButtonColor')
             | {{$t('common.close')}}
           slot(name="actions")
 </template>

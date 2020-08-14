@@ -1,0 +1,28 @@
+// Font
+$fontFamily: 'Roboto', sans-serif;
+$borderRadius: 4px;
+$fontSize: 16px;
+
+// Colors
+$colorLight: 'white';
+$colorDark: 'black';
+
+$colorPrimary: #eee;
+$colorSecondary: #aaa;
+
+// vuetify
+//Globals
+$body-font-family: $fontFamily;
+$border-radius-root: $borderRadius;
+$font-size-root: $fontSize;
+
+:export {
+  fontFamily: $fontFamily;
+  borderRadius: $borderRadius;
+  fontSize: $fontSize;
+
+  colorLight: $colorLight;
+  colorDark: $colorDark;
+  colorPrimary: $colorPrimary;
+  colorSecondary: $colorSecondary;
+}

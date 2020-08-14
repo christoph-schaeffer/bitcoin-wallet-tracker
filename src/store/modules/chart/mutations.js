@@ -17,10 +17,4 @@ export default {
   setValues: (state, payload) => {
     state.values = payload;
   },
-  fetchStart: (state) => {
-    state.isLoading = true;
-  },
-  fetchEnd: (state) => {
-    state.isLoading = false;
-  },
 };

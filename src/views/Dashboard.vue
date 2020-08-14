@@ -1,8 +1,8 @@
 <template lang="pug">
   v-row.px-md-3.mx-0.mt-sm-3.mb-md-3
     v-col( cols="12" sm="6" lg="4" xl="3"
-        v-for="(currency, currencyName, index) in currencyRates"
-        :key="'currency-rate-'+currencyName" )
+      v-for="(currency, currencyName) in currencyRates" :key="'currency-rate-'+currencyName"
+    )
       overlay-card
         template(v-slot:overlay)
           | {{currency.symbol}}
