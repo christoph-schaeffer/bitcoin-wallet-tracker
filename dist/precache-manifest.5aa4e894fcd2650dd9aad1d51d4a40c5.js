@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5328403fde005da57da3",
-    "url": "/bitcoin-wallet-tracker/demo/css/app.2089e539.css"
+    "revision": "23e2a989bb2b2cf388e0",
+    "url": "/bitcoin-wallet-tracker/demo/css/app.390c4d43.css"
   },
   {
-    "revision": "91bed40313a7585eccef",
+    "revision": "74a22a972be4266e1df2",
     "url": "/bitcoin-wallet-tracker/demo/css/chunk-vendors.23467814.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bitcoin-wallet-tracker/demo/img/logo.37edfcde.svg"
   },
   {
-    "revision": "7dc508a4918880d6f9f66a7d9315d90f",
+    "revision": "afd294854bbc10e193df34b8cdbfec17",
     "url": "/bitcoin-wallet-tracker/demo/index.html"
   },
   {
-    "revision": "5328403fde005da57da3",
-    "url": "/bitcoin-wallet-tracker/demo/js/app.b9ec6fb8.js"
+    "revision": "23e2a989bb2b2cf388e0",
+    "url": "/bitcoin-wallet-tracker/demo/js/app.bef54bf0.js"
   },
   {
-    "revision": "91bed40313a7585eccef",
-    "url": "/bitcoin-wallet-tracker/demo/js/chunk-vendors.83b9df57.js"
+    "revision": "74a22a972be4266e1df2",
+    "url": "/bitcoin-wallet-tracker/demo/js/chunk-vendors.c51284ff.js"
   },
   {
     "revision": "7037c2cfc132060f9c8a9779798a9d63",
